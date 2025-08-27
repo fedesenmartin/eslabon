@@ -85,7 +85,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto animate-slide-up animation-delay-600 px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto animate-slide-up animation-delay-600 px-4 mb-16 sm:mb-20">
             <div className="text-center p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-400 mb-2 sm:mb-3">15+</div>
               <div className="text-blue-100 text-sm sm:text-lg">Años de Experiencia</div>
@@ -99,15 +99,17 @@ export default function Hero() {
               <div className="text-blue-100 text-sm sm:text-lg">Soporte Técnico</div>
             </div>
           </div>
+
+          {/* Scroll Indicator - Now positioned below stats */}
+          <div className="animate-bounce">
+            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center mx-auto">
+              <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
-        </div>
-      </div>
+      {/* Remove the old absolute positioned scroll indicator */}
     </section>
   );
 }
