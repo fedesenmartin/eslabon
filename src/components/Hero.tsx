@@ -36,15 +36,15 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-2 h-2 bg-white rounded-full animate-ping" />
       </div>
 
-      <div className="container mx-auto px-4 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full text-white mb-8 animate-fade-in">
-            <span className="text-sm font-medium">🛩️ Líderes en Repuestos Aeronáuticos</span>
+          <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-white/10 backdrop-blur-sm rounded-full text-white mb-6 sm:mb-8 animate-fade-in">
+            <span className="text-xs sm:text-sm font-medium">🛩️ Líderes en Repuestos Aeronáuticos</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-slide-up leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 animate-slide-up leading-tight px-4">
             Grupo{' '}
             <span className="bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
               Eslabón
@@ -52,45 +52,45 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-200">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-200 px-4">
             Tu socio confiable en repuestos y servicios aeronáuticos de alta calidad.
             Conectamos la industria con soluciones precisas.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-slide-up animation-delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 animate-slide-up animation-delay-400 px-4">
             <Button
               onClick={() => scrollToSection('quienes-somos')}
               size="lg"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 text-lg font-semibold group shadow-lg hover:shadow-xl transition-all"
+              className="bg-amber-500 hover:bg-amber-600 text-white px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold group shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
             >
               Conocer Más
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-4 w-5 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               onClick={() => scrollToSection('servicios')}
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-4 text-lg font-semibold group shadow-lg hover:shadow-xl transition-all"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold group shadow-lg hover:shadow-xl transition-all w-full sm:w-auto bg-transparent"
             >
-              <Play className="mr-2 h-5 w-5" />
+              <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Ver Servicios
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto animate-slide-up animation-delay-600">
-            <div className="text-center p-6">
-              <div className="text-4xl md:text-5xl font-bold text-amber-400 mb-3">15+</div>
-              <div className="text-blue-100 text-lg">Años de Experiencia</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto animate-slide-up animation-delay-600 px-4">
+            <div className="text-center p-4 sm:p-6">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-400 mb-2 sm:mb-3">15+</div>
+              <div className="text-blue-100 text-sm sm:text-lg">Años de Experiencia</div>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl md:text-5xl font-bold text-amber-400 mb-3">500+</div>
-              <div className="text-blue-100 text-lg">Clientes Satisfechos</div>
+            <div className="text-center p-4 sm:p-6">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-400 mb-2 sm:mb-3">500+</div>
+              <div className="text-blue-100 text-sm sm:text-lg">Clientes Satisfechos</div>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl md:text-5xl font-bold text-amber-400 mb-3">24/7</div>
-              <div className="text-blue-100 text-lg">Soporte Técnico</div>
+            <div className="text-center p-4 sm:p-6">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-400 mb-2 sm:mb-3">24/7</div>
+              <div className="text-blue-100 text-sm sm:text-lg">Soporte Técnico</div>
             </div>
           </div>
         </div>

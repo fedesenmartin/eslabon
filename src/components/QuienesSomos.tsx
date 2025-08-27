@@ -53,13 +53,13 @@ export default function QuienesSomos() {
                 Conectando la industria aeronáutica con{' '}
                 <span className="text-blue-600">soluciones precisas</span>
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 Desde nuestros inicios en 2008, Grupo Eslabón se ha establecido como 
                 un referente en el suministro de repuestos aeronáuticos de alta calidad. 
                 Nuestra misión es garantizar que cada aeronave mantenga los más altos 
                 estándares de seguridad y rendimiento.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 Con una red de proveedores globales certificados y un equipo de 
                 especialistas técnicos, ofrecemos soluciones integrales que van desde 
                 componentes menores hasta sistemas complejos de aviación comercial y militar.
@@ -69,11 +69,11 @@ export default function QuienesSomos() {
               <div className="grid grid-cols-2 gap-6 pt-8">
                 <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="text-3xl font-bold text-blue-600 mb-2">5000+</div>
-                  <div className="text-gray-600">Repuestos en Stock</div>
+                  <div className="text-gray-700">Repuestos en Stock</div>
                 </div>
                 <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="text-3xl font-bold text-amber-500 mb-2">50+</div>
-                  <div className="text-gray-600">Países Atendidos</div>
+                  <div className="text-gray-700">Países Atendidos</div>
                 </div>
               </div>
             </div>
@@ -82,15 +82,15 @@ export default function QuienesSomos() {
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/63294/aeroplane-aircraft-airplane-aviation-63294.jpeg"
-                  alt="Aeronave en mantenimiento"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+                  alt="Repuestos aeronáuticos y tecnología de aviación"
                   className="w-full h-full object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-blue-900/20" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6">
-                    <h4 className="font-semibold text-gray-900 mb-1">Tecnología Avanzada</h4>
-                    <p className="text-sm text-gray-600">Sistemas de trazabilidad y control de calidad de última generación</p>
+                <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-6">
+                    <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Tecnología Avanzada</h4>
+                    <p className="text-xs sm:text-sm text-gray-700">Sistemas de trazabilidad y control de calidad de última generación</p>
                   </div>
                 </div>
               </div>
@@ -98,22 +98,22 @@ export default function QuienesSomos() {
           </div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
               <Card 
                 key={index}
                 className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white h-full"
               >
-                <CardHeader className="text-center pb-6">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gray-50 rounded-full flex items-center justify-center">
+                <CardHeader className="text-center pb-4 sm:pb-6 px-4 sm:px-6">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-gray-50 rounded-full flex items-center justify-center">
                     {value.icon}
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900">
+                  <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
                     {value.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center pt-0">
-                  <p className="text-gray-600 leading-relaxed">
+                <CardContent className="text-center pt-0 px-4 sm:px-6 pb-4 sm:pb-6">
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                     {value.description}
                   </p>
                 </CardContent>

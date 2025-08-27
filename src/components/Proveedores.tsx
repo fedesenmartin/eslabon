@@ -96,7 +96,7 @@ export default function Proveedores() {
                   <CardTitle className="text-xl font-bold text-gray-900 mb-4">
                     {category.title}
                   </CardTitle>
-                  <p className="text-gray-600">
+                  <p className="text-gray-700">
                     {category.description}
                   </p>
                 </CardHeader>
@@ -116,7 +116,7 @@ export default function Proveedores() {
                   {/* Features */}
                   <div className="space-y-3 flex-grow">
                     {category.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-gray-600">
+                      <div key={featureIndex} className="flex items-center text-gray-700">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
@@ -164,10 +164,10 @@ export default function Proveedores() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all">
                   Aplicar como Proveedor
                 </Button>
-                <Button size="lg" variant="outline" className="px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all">
+                <Button size="lg" variant="outline" className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all text-gray-700 border-gray-300 hover:bg-gray-50">
                   Descargar Requisitos
                 </Button>
               </div>

@@ -121,41 +121,67 @@ export default function Header() {
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="lg:hidden mt-4 py-6 bg-white rounded-xl shadow-xl border">
-              <div className="flex flex-col space-y-4 px-6">
+            <div
+              className={`lg:hidden absolute top-full left-0 w-full transition-all duration-300 ${
+                isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-blue-900/95'
+              }`}
+            >
+              <div className="px-4 py-6 space-y-4">
                 <button
                   onClick={() => scrollToSection('inicio')}
-                  className="text-left text-gray-700 hover:text-blue-900 py-3 font-medium transition-colors"
+                  className={`block w-full text-left py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-blue-900 hover:bg-gray-100' 
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   Inicio
                 </button>
                 <button
                   onClick={() => scrollToSection('quienes-somos')}
-                  className="text-left text-gray-700 hover:text-blue-900 py-3 font-medium transition-colors"
+                  className={`block w-full text-left py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-blue-900 hover:bg-gray-100' 
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   Quiénes Somos
                 </button>
                 <button
                   onClick={() => scrollToSection('servicios')}
-                  className="text-left text-gray-700 hover:text-blue-900 py-3 font-medium transition-colors"
+                  className={`block w-full text-left py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-blue-900 hover:bg-gray-100' 
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   Servicios
                 </button>
                 <button
                   onClick={() => scrollToSection('clientes')}
-                  className="text-left text-gray-700 hover:text-blue-900 py-3 font-medium transition-colors"
+                  className={`block w-full text-left py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-blue-900 hover:bg-gray-100' 
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   Clientes
                 </button>
                 <button
                   onClick={() => scrollToSection('proveedores')}
-                  className="text-left text-gray-700 hover:text-blue-900 py-3 font-medium transition-colors"
+                  className={`block w-full text-left py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-blue-900 hover:bg-gray-100' 
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   Proveedores
                 </button>
-                <Button className="bg-amber-500 hover:bg-amber-600 text-white mt-4 w-full">
-                  Contacto
-                </Button>
+                <div className="pt-4">
+                  <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white py-3 px-6">
+                    Contacto
+                  </Button>
+                </div>
               </div>
             </div>
           )}

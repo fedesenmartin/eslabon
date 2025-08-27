@@ -107,14 +107,14 @@ export default function Servicios() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col">
-                  <p className="text-gray-600 mb-6 leading-relaxed text-center">
+                  <p className="text-gray-700 mb-6 leading-relaxed text-center">
                     {service.description}
                   </p>
                   
                   {/* Features List */}
                   <ul className="space-y-3 mb-8 flex-grow">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
+                      <li key={featureIndex} className="flex items-center text-gray-700">
                         <div className={`w-2 h-2 rounded-full ${service.bgColor} mr-3 flex-shrink-0`} />
                         {feature}
                       </li>
@@ -124,7 +124,7 @@ export default function Servicios() {
                   <Button 
                     variant="outline" 
                     size="sm"
-                    className={`w-full group-hover:bg-gradient-to-r ${service.color} group-hover:text-white group-hover:border-transparent transition-all duration-300 mt-auto`}
+                    className={`w-full text-gray-700 border-gray-300 hover:bg-gray-50 group-hover:bg-gradient-to-r ${service.color} group-hover:text-white group-hover:border-transparent transition-all duration-300 mt-auto`}
                   >
                     Más Información
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -135,21 +135,21 @@ export default function Servicios() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 rounded-3xl p-6 sm:p-8 md:p-16 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-black/10" />
             <div className="relative z-10">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
                 ¿Necesitas un repuesto específico?
               </h3>
-              <p className="text-blue-100 text-base sm:text-lg mb-10 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-blue-100 text-sm sm:text-base md:text-lg mb-6 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
                 Nuestro equipo de especialistas está listo para ayudarte a encontrar 
                 exactamente lo que necesitas, cuando lo necesitas.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 text-lg shadow-lg hover:shadow-xl transition-all">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
+                <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-white px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all">
                   Solicitar Cotización
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-4 text-lg shadow-lg hover:shadow-xl transition-all">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all bg-transparent">
                   Contactar Especialista
                 </Button>
               </div>
