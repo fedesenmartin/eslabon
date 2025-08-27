@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 sm:pt-24"
       style={{
         background: 'linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e40af 100%)',
       }}
@@ -28,12 +28,18 @@ export default function Hero() {
         />
       </div>
 
-      {/* Floating Elements */}
+      {/* Floating Elements - Responsive positioning */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-amber-400 rounded-full animate-ping" />
-        <div className="absolute top-40 right-20 w-1 h-1 bg-white rounded-full animate-pulse" />
-        <div className="absolute bottom-32 left-20 w-3 h-3 bg-amber-400 rounded-full animate-bounce" />
-        <div className="absolute bottom-20 right-10 w-2 h-2 bg-white rounded-full animate-ping" />
+        <div className="absolute top-20 left-4 sm:left-10 w-2 h-2 bg-amber-400 rounded-full animate-ping hidden sm:block" />
+        <div className="absolute top-40 right-4 sm:right-20 w-1 h-1 bg-white rounded-full animate-pulse hidden sm:block" />
+        <div className="absolute bottom-32 left-4 sm:left-20 w-3 h-3 bg-amber-400 rounded-full animate-bounce hidden sm:block" />
+        <div className="absolute bottom-20 right-4 sm:right-10 w-2 h-2 bg-white rounded-full animate-ping hidden sm:block" />
+        
+        {/* Mobile-only floating elements with better positioning */}
+        <div className="absolute top-16 left-8 w-1 h-1 bg-amber-400 rounded-full animate-ping sm:hidden" />
+        <div className="absolute top-32 right-8 w-1 h-1 bg-white rounded-full animate-pulse sm:hidden" />
+        <div className="absolute bottom-24 left-8 w-2 h-2 bg-amber-400 rounded-full animate-bounce sm:hidden" />
+        <div className="absolute bottom-16 right-8 w-1 h-1 bg-white rounded-full animate-ping sm:hidden" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

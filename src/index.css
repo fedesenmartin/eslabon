@@ -65,6 +65,15 @@ body {
   }
 }
 
+@keyframes float-mobile {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .animate-fade-in {
   animation: fade-in 1s ease-out;
 }
@@ -75,6 +84,10 @@ body {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-mobile {
+  animation: float-mobile 2s ease-in-out infinite;
 }
 
 .animation-delay-200 {
@@ -92,6 +105,17 @@ body {
 /* Smooth scrolling for all browsers */
 html {
   scroll-behavior: smooth;
+}
+
+/* Ensure sections are properly visible when scrolled to */
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 640px) {
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
 }
 
 /* Custom scrollbar */
@@ -213,4 +237,44 @@ img[loading="lazy"] {
 
 img[loading="lazy"]:loaded {
   opacity: 1;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  .animate-float {
+    animation: float-mobile 2s ease-in-out infinite;
+  }
+  
+  /* Reduce animation intensity on mobile for better performance */
+  .animate-ping {
+    animation-duration: 2s;
+  }
+  
+  .animate-bounce {
+    animation-duration: 1.5s;
+  }
+  
+  .animate-pulse {
+    animation-duration: 2s;
+  }
+  
+  /* Ensure proper spacing for fixed header on mobile */
+  .pt-20 {
+    padding-top: 5rem;
+  }
+  
+  /* Optimize backdrop blur for mobile performance */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  /* Reduce shadow intensity on mobile for better performance */
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
 }
